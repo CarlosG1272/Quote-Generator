@@ -2,7 +2,7 @@
   "name": "quotes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://CarlosG1272.github.io/Quote-Generator",
+  "homepage": "https://carlosg1272.github.io/Quote-Generator/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
