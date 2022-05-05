@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { Quote } from './Quotes/Quotes';
+import { QuoteClass } from './Quotes/QuotesClass';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <QuoteClass /> 
+      <section className='footer'>
+        <div className='author'>Created by <a href='https://github.com/CarlosG1272' target={"_blank"}>Carlos Guerra</a></div>
+        <div className='author'><a href='https://www.freecodecamp.org/learn' target={"_blank"}>FreeCodeCamp</a> Challenge´s</div>
+      </section>
     </div>
   );
 }
