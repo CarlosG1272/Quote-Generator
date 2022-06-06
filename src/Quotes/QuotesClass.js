@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { faTumblr, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import styled from "styled-components"
 
 export class QuoteClass extends React.Component{
 
@@ -36,14 +39,15 @@ export class QuoteClass extends React.Component{
 
     colorChange = ()=>{
         // Claro p, si defino mis variables fuera de esta función, estas estarán undefined, asi que tengo que definirlas dentro de mi función, siendo asi que hasta que no se ejecute esta función pues no se asignarán los valores de body y text
-        // Piensa p chato
         let body = document.querySelector("body");
         let text = document.querySelector("#quote-box");
+        let button = document.querySelectorAll(".button"); 
+        let buttonBigger = document.querySelector(".buttonBigger");
         let index = this.color()
         body.style.backgroundColor = this.colors[index]
         text.style.color = this.colors[index]
-        console.log(text)
-        
+        button.forEach(el=> el.style.backgroundColor = this.colors[index])
+        buttonBigger.style.backgroundColor = this.colors[index]
         }   
     
     componentDidMount(){
@@ -51,10 +55,7 @@ export class QuoteClass extends React.Component{
         this.colorChange() 
     }
         
-    
-  
 
-   
      random = ()=>{
         let index = Math.floor(Math.random()*this.state.data.length) 
         return index
@@ -68,11 +69,12 @@ export class QuoteClass extends React.Component{
     }
 
 
+
+
    
         render(){
-            
         return(
-            <section id="quote-box">
+            <section className={this.props.theme} id="quote-box">
                 <section id="text">
                     " {this.state.current.quote} "
                 </section>
@@ -81,30 +83,28 @@ export class QuoteClass extends React.Component{
                 </div>
         
                 <div className="buttons">
-        
+            
                     <div id={"separator"}>
                         <a
-                            className="button"
-                            id="tweet-quote"
+                            className={"button"}
+                            id={`${this.props.theme}button`}
                             title="Tweet this quote!"
                             target="_blank"
-                            href="https://www.freecodecamp.org/learn"
+                            href="https://twitter.com/intent/tweet?hashtags=quotes&text=%22What%E2%80%99s%20money%3F%20A%20man%20is%20a%20success%20if%20he%20gets%20up%20in%20the%20morning%20and%20goes%20to%20bed%20at%20night%20and%20in%20between%20does%20what%20he%20wants%20to%20do.%22%20Bob%20Dylan"
                         >
-                             <i className="fa fa-twitter"></i>
-                            <img src="http://assets.stickpng.com/images/5847f91ccef1014c0b5e48b8.png" width={"35"} height={"25"}></img>
+                            <FontAwesomeIcon className="icon" icon={faTwitter}/>
                         </a>
                         <a
-                            className="button"
-                            id="tumblr-quote"
+                            className={"button"}
+                            id={`${this.props.theme}button`}
                             title="Post this quote on tumblr!"
                             target="_blank"
-                            href="https://github.com/CarlosG1272"
+                            href="https://www.tumblr.com/widgets/share/tool?posttype=quote&caption=Bob%20Dylan&content=What%E2%80%99s%20money%3F%20A%20man%20is%20a%20success%20if%20he%20gets%20up%20in%20the%20morning%20and%20goes%20to%20bed%20at%20night%20and%20in%20between%20does%20what%20he%20wants%20to%20do.&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button"
                         >
-                            <i className="fa fa-tumblr"></i>
-                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width={"30"} height={"30"}></img>
+                            <FontAwesomeIcon className="icon" icon={faTumblr}/>
                         </a>
                     </div>
-                        <button className="button" id="new-quote" onClick={(e)=>this.change(e)}>New quote</button>
+                        <button className="buttonBigger" id={`${this.props.theme}button`} onClick={(e)=>this.change(e)}>New quote</button>
                     
                 </div>
                 
