@@ -1,12 +1,13 @@
 body{
   display: flex;
   height: 100vh;
-  align-items: center;
   justify-content: center;
   background-color: red;
   transition: background 1s ease-out;
 }
-
+.App{
+  margin-top: 5rem;
+}
 
 .light{
   width: 450px;
@@ -76,6 +77,8 @@ body{
   } 
 }
 
+
+
 #lightbutton{
   color: white;
 }
@@ -135,4 +138,12 @@ box-shadow: 4px -7px 28px 6px rgba(0,0,0,0.75);
 
 .author{
   margin-top: 5px
+}
+
+#changeTheme{
+  padding: 20px;
+}
+
+#quoteContainer{
+  margin-top: 0px;
 }

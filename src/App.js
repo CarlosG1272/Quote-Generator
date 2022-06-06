@@ -13,10 +13,16 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={handleTheme} style={{backgroundColor: 'transparent', border: "0px", cursor:"pointer"}}>
-        <img src={require(`../src/assets/${theme === "light" ? "moon":"sun"}.png`)} height={"50"}/>
-      </button>
-      <QuoteClass  theme={theme}/> 
+      <div> 
+        <button id={"changeTheme"}onClick={handleTheme} style={{backgroundColor: 'transparent', border: "0px", cursor:"pointer"}}>
+          <img src={require(`../src/assets/${theme === "light" ? "moon":"sun"}.png`)} height={"50"}/>
+        </button>
+      </div>
+     
+      <div id='quoteContainer'>
+        <QuoteClass  theme={theme}/> 
+      </div>
+     
       <section className='footer' id={`${theme}Footer`}>
         <div className='author'>Created by <a href='https://github.com/CarlosG1272' target={"_blank"}>Carlos Guerra</a></div>
         <div className='author'><a href='https://www.freecodecamp.org/learn' target={"_blank"}>FreeCodeCamp</a> Challenge´s</div>
