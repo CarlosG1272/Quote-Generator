@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Quote-Generator/static/css/main.8c95aebb.css",
-    "main.js": "/Quote-Generator/static/js/main.f0a90524.js",
+    "main.css": "/Quote-Generator/static/css/main.6904594a.css",
+    "main.js": "/Quote-Generator/static/js/main.7d1a3edd.js",
     "static/media/sun.png": "/Quote-Generator/static/media/sun.c22bf5e6db4671018743.png",
     "index.html": "/Quote-Generator/index.html",
-    "main.8c95aebb.css.map": "/Quote-Generator/static/css/main.8c95aebb.css.map",
-    "main.f0a90524.js.map": "/Quote-Generator/static/js/main.f0a90524.js.map"
+    "main.6904594a.css.map": "/Quote-Generator/static/css/main.6904594a.css.map",
+    "main.7d1a3edd.js.map": "/Quote-Generator/static/js/main.7d1a3edd.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c95aebb.css",
-    "static/js/main.f0a90524.js"
+    "static/css/main.6904594a.css",
+    "static/js/main.7d1a3edd.js"
   ]
 }
